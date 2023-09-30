@@ -1,0 +1,53 @@
+{
+  "name": "pr-web-consulting",
+  "version": "0.0.1",
+  "description": "PR Web Consulting",
+  "keywords": [
+    "template",
+    "components"
+  ],
+  "license": "",
+  "author": "Phillip Rearick",
+  "scripts": {
+    "build": "parcel build --target default",
+    "deploy": "gh-pages -d dist",
+    "dev": "parcel --target default",
+    "predeploy": "npm run rebuild",
+    "rebuild": "npm run reset && npm run build",
+    "reset": "rm -rf .parcel-cache && rm -rf dist",
+    "start": "npm run rebuild && npm run dev"
+  },
+  "devDependencies": {
+    "@parcel/compressor-brotli": "^2.9.3",
+    "@parcel/compressor-gzip": "^2.9.3",
+    "@parcel/packager-raw-url": "^2.9.3",
+    "@parcel/transformer-inline-string": "^2.9.3",
+    "@parcel/transformer-webmanifest": "^2.9.3",
+    "autoprefixer": "^10.4.15",
+    "buffer": "^6.0.3",
+    "cssnano": "^6.0.1",
+    "gh-pages": "^6.0.0",
+    "parcel": "^2.9.3",
+    "parcel-reporter-static-files-copy": "^1.5.2",
+    "postcss": "^8.4.29",
+    "sharp": "^0.31.3",
+    "tailwindcss": "^3.3.3"
+  },
+  "repository": {
+    "url": "git+https://github.com/psrearick/website-staging.git"
+  },
+  "targets": {
+    "default": {
+      "distDir": "./dist",
+      "publicUrl": ".",
+      "source": [
+        "src/index.html"
+      ]
+    }
+  },
+  "dependencies": {
+    "acorn": "^8.10.0",
+    "acorn-walk": "^8.2.0",
+    "fontfaceobserver": "^2.3.0"
+  }
+}

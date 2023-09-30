@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .hover-float {
+        @apply transition-transform will-change-transform duration-300 hover:-translate-y-1;
+    }
+
+    .hover-shadow {
+        @apply hover:shadow-2xl;
+    }
+
+    ul.list {
+        @apply list-disc list-inside pl-4;
+    }
+
+    ul.list > li {
+        @apply mb-1;
+    }
+
+    .accordion-title {
+        @apply cursor-pointer text-primary-600 hover:text-primary-800
+        border-b border-primary-100 hover:border-primary-800
+        px-4 py-4 mb-4 mt-8 flex justify-between items-center uppercase;
+    }
+
+    .active > .accordion-title > div > svg {
+        @apply flex-1;
+    }
+
+    .active > .accordion-title > p {
+        @apply max-w-[75%] flex-1;
+    }
+
+    .active > .accordion-title {
+        @apply border border-primary-600 rounded-full;
+    }
+
+    .accordion > li > .accordion-content,
+    .hidden-content-container .hidden-content {
+        @apply ease-in-out duration-300 transition-[max-height] overflow-hidden px-6;
+    }
+
+    .accordion > li:not(.active) > .accordion-content,
+    .hidden-content-container:not(.active) .hidden-content {
+        @apply max-h-0;
+    }
+
+    .accordion > li.active > .accordion-content,
+    .hidden-content-container.active .hidden-content:not(.fixed) {
+        @apply max-h-screen;
+    }
+
+    .btn-secondary-hollow {
+        background-color: theme('colors.white');
+        color: theme('colors.secondary.700');
+        border-width: 1px;
+        border-color: theme('colors.secondary.700');
+    }
+
+    .btn-secondary-hollow:hover {
+        background-color: theme('colors.secondary.100');
+        color: theme('colors.secondary.900');
+        border-color: theme('colors.secondary.900');
+    }
+
+    .btn-secondary {
+        background-color: theme('colors.secondary.600');
+        color: theme('colors.white');
+    }
+
+    .btn-secondary:hover {
+        background-color: theme('colors.secondary.100');
+        color: theme('colors.secondary.900');
+    }
+
+    .btn-hollow {
+        background-color: theme('colors.white');
+        color: theme('colors.primary.600');
+        border-width: 1px;
+        border-color: theme('colors.primary.600');
+    }
+
+    .btn-hollow:hover {
+        background-color: theme('colors.gray.100');
+        color: theme('colors.primary.900');
+        border-color: theme('colors.primary.900');
+    }
+
+    .btn,
+    .btn-light:hover {
+        background-color: theme('colors.primary.600');
+        color: theme('colors.white');
+    }
+
+    .btn:hover,
+    .btn-light {
+        background-color: theme('colors.primary.200');
+        color: theme('colors.primary.900');
+    }
+
+    .btn-md {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        box-shadow:
+                0 10px 15px -3px rgb(0 0 0 / 10%),
+                0 4px 6px -4px rgb(0 0 0 / 10%);
+    }
+
+    .btn-md:hover {
+        box-shadow:
+                0 20px 25px -5px rgb(0 0 0 / 10%),
+                0 8px 10px -6px rgb(0 0 0 / 10%);
+    }
+
+    .link-text {
+        color: theme('colors.primary.800');
+    }
+
+    .link-text-light {
+        color: theme('colors.primary.50');
+    }
+
+    .link-text-light:hover,
+    .link-text:hover {
+        background-color: theme('colors.primary.700');
+        color: theme('colors.white');
+    }
+
+    .link-text-light-active,
+    .link-text-active {
+        background-color: theme('colors.primary.700');
+        color: theme('colors.white');
+    }
+
+    .link-text-light-active:hover,
+    .link-text-active:hover {
+        background-color: theme('colors.primary.800');
+        color: theme('colors.white');
+    }
+
+    .secondary-link-text {
+        @apply text-secondary-600 hover:text-secondary-300 underline;
+    }
+
+    .card {
+        @apply border border-gray-200 rounded-lg p-4;
+    }
+
+    .card div.card-body > * {
+        @apply text-gray-600 mb-6;
+    }
+
+    .card p.card-heading {
+        @apply text-black text-xl font-serif mb-2 my-6;
+    }
+
+    .circle-box {
+        @apply w-20 h-20 rounded-full mx-auto flex items-center text-center;
+    }
+
+    .circle-box p {
+        @apply w-full p-0 m-0 text-lg;
+    }
+
+    .circle-box.circle-primary {
+        @apply bg-primary-50;
+    }
+
+    .circle-box.circle-primary p {
+        @apply text-primary-700;
+    }
+}
+
+@layer utilities {
+    .radial-gradient {
+        background: radial-gradient(var(--tw-gradient-stops));
+    }
+}
+
+.font-sans.fonts-loaded {
+    font-family: Inter, Nunito, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+}
+
+.font-serif.fonts-loaded {
+    font-family: Montserrat, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hidden {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+pre {
+    overflow-x: auto !important;
+}
+
+pre code {
+    overflow-wrap: normal;
+    word-wrap: normal;
+    white-space: pre;
+}
+
+.fancy-text {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #121518;
+    text-shadow: 3px 3px 0 #dbdddf;
+    font-weight: bold;
+}
+
+h1.fancy-text,
+h2.fancy-text,
+h3.fancy-text,
+.text-6xl.fancy-text,
+.text-5xl.fancy-text,
+.text-7xl.fancy-text {
+    text-shadow: 5px 5px 0 #dbdddf;
+}
