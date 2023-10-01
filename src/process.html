@@ -1,19 +1,29 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>Our Legacy | Gentlemen Custom Tailor</title>
-    <meta name="description" content="Our Legacy | Gentlemen Custom Tailor"/>
+    <title>Process | Gentlemen Custom Tailor</title>
+    <meta name="description" content="Process | Gentlemen Custom Tailor"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <meta property="og:title" content="Our Legacy | Gentlemen Custom Tailor"/>
+    <meta property="og:title" content="Process | Gentlemen Custom Tailor"/>
     <meta property="og:type" content=""/>
-    <meta property="og:url" content="{{URL}}"/>
+    <meta property="og:url" content="gentlementcustomtailor.com"/>
     <meta property="og:image" content=""/>
 
     <link href="./site.webmanifest" rel="manifest">
     <link href="./icon.png" rel="apple-touch-icon">
     <link href="./css/index.css" rel="stylesheet">
     <style>
+        .hero-bg-img {
+            background-size: cover;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, #09090b 100%),
+            url(./img/sewing.jpg?as=webp&width=1440),
+            url(./img/sewing.jpg?as=webp&height=768),
+            url(./img/sewing.jpg?as=webp&&height=667);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
         @font-face {
             font-family: 'Inter';
             font-weight: 300;
@@ -127,7 +137,7 @@
                                 <li
                                         class="px-4 py-4 flex flex-col justify-center hover:text-primary-400"
                                 >
-                                    <a href="#">Services</a>
+                                    <a href="./services.html">Services</a>
                                 </li>
                                 <li
                                         class="px-4 py-4 flex flex-col justify-center hover:text-primary-400"
@@ -194,12 +204,30 @@
     </div>
     <!-- End Navigation -->
 
+    <!-- Hero -->
+    <div id='hero' class='h-full w-full'>
+        <div
+                class='hero-bg-img min-h-[667px] md:min-h-[768px] h-full relative pt-32 mg:pt-42 lg:pt-48'
+        >
+            <div
+                    class='text-white px-4 max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto'
+            >
+                <p class='text-4xl md:text-5xl lg:text-6xl font-serif mb-8 max-w-[50%]'>
+                    What to Expect
+                </p>
+                <p
+                        class='text-lg sm:text-xl md:text-3xl lg:text-4xl text-primary-500'
+                >
+                    From your vision to your wardrobe, we stitch the details.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero -->
+
     <!-- Process -->
     <div id="process" class="bg-zinc-950 text-gray-200">
-        <div class="py-32 max-w-7xl px-4 md:px-16 lg:px-24">
-            <div class="pb-12 text-center text-4xl text-primary-500">
-                What to Expect
-            </div>
+        <div class="py-32 max-w-7xl px-4 md:px-16 lg:px-24 mx-auto">
             <div class="pb-12 text-center md:text-left">
                 The process of getting clothing made by a custom made-to-measure tailor
                 can be broken down into the following steps
@@ -451,7 +479,7 @@
                     <span> - </span>
                     <a class="hover:text-primary-500" href="./process.html">What to Expect</a>
                     <span> - </span>
-                    <a class="hover:text-primary-500" href="#">Services</a>
+                    <a class="hover:text-primary-500" href="./services.html">Services</a>
                     <span> - </span>
                     <a class="hover:text-primary-500" href="./about.html">Our Legacy</a>
                     <span> - </span>
