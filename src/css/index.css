@@ -179,6 +179,61 @@
     }
 }
 
+
+* {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 300;
+    src: url('../fonts/Inter-Light.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: bold;
+    src: url('../fonts/Inter-Bold.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    src: url('../fonts/Montserrat-Light.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
+    font-display: swap;
+}
+
+.font-sans {
+    font-family: Inter, Nunito, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.font-serif {
+    font-family: Montserrat, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 .font-sans.fonts-loaded {
     font-family: Inter, Nunito, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
 }
@@ -222,4 +277,9 @@ h3.fancy-text,
 .text-5xl.fancy-text,
 .text-7xl.fancy-text {
     text-shadow: 5px 5px 0 #dbdddf;
+}
+
+.nav-links {
+    will-change: transform, opacity, scroll-position;
+    transition-property: transform, opacity;
 }
