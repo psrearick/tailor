@@ -17,7 +17,7 @@
   cache-control: public
   cache-control: max-age=31536000
 /*
-  Content-Security-Policy: frame-ancestors 'none'; default-src 'self'; script-src 'strict-dynamic' 'unsafe-inline' http: https:; style-src 'self'; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; report-uri https://652710760fcafd85d341f7cc.endpoint.csper.io/?v=1; worker-src 'none'; require-trusted-types-for 'script';
+  Content-Security-Policy: frame-ancestors 'none'; default-src 'self'; script-src 'strict-dynamic' 'nonce-rAnd0m123' 'unsafe-inline' http: https:; style-src 'self'; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; report-uri https://652710760fcafd85d341f7cc.endpoint.csper.io/?v=1; worker-src 'none'; require-trusted-types-for 'script';
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
